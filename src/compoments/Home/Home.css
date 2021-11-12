@@ -1,0 +1,76 @@
+.bg{
+    height: 85vh;
+    background: url('../../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.banner-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 185%;
+}
+
+    .banner-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 185%;
+        text-align:left;
+        padding: 0 80px;
+    }
+
+.product-area{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat( 3,1fr);
+}
+
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center
+}
+
+.service{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media only screen and (max-width: 668px){
+        .banner-text{
+            height: auto;
+            padding: 0;
+        }
+        .banner-img{
+            height: auto;
+            margin-top: 50px;
+        }
+        .product-area{
+            grid-template-columns: repeat( 1,1fr);
+        }
+    }
