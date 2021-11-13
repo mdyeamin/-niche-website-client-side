@@ -15,7 +15,7 @@ const Home = () => {
     const { isLoading } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://polar-anchorage-77729.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data.slice(0, 6)))
     }, [])
@@ -37,8 +37,8 @@ const Home = () => {
                                     </h1>
 
                                     <p style={{ color: "#6F8991" }}>It can be a very secure path to earn good money and make you very successfully croativety ontreprenour. You can tako advice from experience Person and improve you.</p>
-                                    <Link to="/explore">
-                                        <button style={{ backgroundColor: "#13AE92", fontSize: "18px", fontWeight: 500, color: "#fff" }} className="btn">Explore Now</button>
+                                    <Link to="/explore" style={{ textDecoration: "none" }}>
+                                        <button style={{ backgroundColor: "#13AE92", fontSize: "18px", fontWeight: 500, color: "#fff" }} className="btn">Explore Now &nbsp; <i class="fas fa-angle-double-right"></i></button>
                                     </Link>
                                 </div>
                             </div>

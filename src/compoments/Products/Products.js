@@ -1,6 +1,6 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
-import { Card } from 'react-bootstrap';
+
 import { Link } from 'react-router-dom';
 import './Product.css'
 
@@ -8,18 +8,18 @@ const Products = ({ product }) => {
     const { title, img, dec, price, id } = product;
 
     return (
-        <div style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={img} />
-            <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Card.Title>$ {price}</Card.Title>
-                <Card.Text>
+        <div className="product" >
+            <img src={img} alt="" />
+            <div>
+                <h4>{title}</h4>
+                <h4>$ {price}</h4>
+                <p>
                     {dec.slice(0, 98)}
-                </Card.Text>
+                </p>
                 <Link to={`/booking/${id}`}>
                     <Button className="addtobag" variant="primary">Add To Bag</Button>
                 </Link>
-            </Card.Body>
+            </div>
         </div>
     );
 };

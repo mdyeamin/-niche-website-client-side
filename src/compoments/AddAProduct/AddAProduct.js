@@ -1,12 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-
+import './AddAProduct.css'
 const AddAProduct = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log('kulu', data);
         console.log(JSON.stringify(data))
-        fetch("http://localhost:5000/services", {
+        fetch("https://polar-anchorage-77729.herokuapp.com/services", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -30,15 +30,16 @@ const AddAProduct = () => {
 
                     </div>
                     <div className="col-md-6  add-user-area">
-                        <h2>Add Travel Place</h2>
+                        <h2>Add A Product</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
 
                             <input placeholder="Title" {...register("title")} />
                             <textarea placeholder="Description" {...register("dec")} />
-                            <input placeholder="Image URL" {...register("img")} />
-                            <input placeholder="price" {...register("price")} />
+                            <input placeholder="Image URL" {...register("img")} /> <br />
+                            <input placeholder="price" {...register("price")} /> <br />
                             {/* <input placeholder="Location" {...register("location")} /> */}
-                            <input placeholder="country" {...register("country")} />
+                            <input placeholder="brand" {...register("brand")} /> <br />
+                            <input placeholder="id" {...register("id")} />
 
 
                             {errors.exampleRequired && <span>This field is required</span>}

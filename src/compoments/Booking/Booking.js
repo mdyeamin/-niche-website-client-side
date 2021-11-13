@@ -11,7 +11,7 @@ const Booking = () => {
     const [books, setBooks] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://polar-anchorage-77729.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setBooks(data))
     }, [])
@@ -20,12 +20,12 @@ const Booking = () => {
     console.log('booking data is', book);
 
     const onSubmit = data => {
-        data.status = 'PLACE';
+        data.status = 'PENDING';
         data.poductId = bookingId;
         data.productName = book?.title;
         data.img = book?.img
         console.log(JSON.stringify(data))
-        fetch("http://localhost:5000/orders", {
+        fetch("https://polar-anchorage-77729.herokuapp.com/orders", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

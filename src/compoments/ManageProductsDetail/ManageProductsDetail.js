@@ -10,7 +10,7 @@ const ManageProductsDetail = ({ explore }) => {
     const handleDelete = (id) => {
         const confirmation = window.confirm('Are you Sure? want to delete this item?')
         if (confirmation) {
-            fetch(`http://localhost:5000/deleteproduct/${id}`, {
+            fetch(`https://polar-anchorage-77729.herokuapp.com/deleteproduct/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })
@@ -31,7 +31,7 @@ const ManageProductsDetail = ({ explore }) => {
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Title>$ {price}</Card.Title>
-                <Card.Text >
+                <Card.Text style={{ fontSize: "16px" }} >
                     {dec.slice(0, 98)}
                 </Card.Text>
 

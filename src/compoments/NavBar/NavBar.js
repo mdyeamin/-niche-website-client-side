@@ -11,7 +11,7 @@ const NavBar = () => {
             <Navbar style={{ backgroundColor: "#131A25" }} collapseOnSelect expand="lg" bg="" variant="">
                 <Container>
                     <Navbar.Brand>
-                        <Link to="/">  <img style={{ textDecoration: "none", height: "60px" }} src={logo} alt="" /> <span style={{ color: "white" }}>West More Land's</span> </Link>
+                        <Link to="/" style={{ textDecoration: "none" }}>   <img style={{ textDecoration: "none", height: "60px" }} src={logo} alt="" /> <span style={{ color: "white" }}>West More Land's</span> </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ backgroundColor: "#6F8C88" }} />
                     <Navbar.Collapse id="responsive-navbar-nav">

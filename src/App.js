@@ -23,6 +23,7 @@ import AddAProduct from './compoments/AddAProduct/AddAProduct';
 import MakeAdmin from './compoments/MakeAdmin/MakeAdmin';
 import ManageProducts from './compoments/ManageProducts/ManageProducts';
 import Booking from './compoments/Booking/Booking';
+import NotFound from './compoments/NotFound/NotFound';
 
 
 
@@ -102,11 +103,10 @@ function App() {
               <ManageProducts></ManageProducts>
               <Footer></Footer>
             </Route>
-
-
-
+            <Route exact path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
-
         </Router>
       </AuthProvider>
 

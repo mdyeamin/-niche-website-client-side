@@ -29,7 +29,7 @@ const Login = () => {
     const handleLoginSubmit = e => {
         loginUser(loginData?.email, loginData?.password, location, history)
         if (loginData?.email && loginData?.password) {
-            Swal.fire("logdin successfylly")
+            Swal.fire("Login Successfully")
         }
         e.preventDefault()
 

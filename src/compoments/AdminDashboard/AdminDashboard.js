@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import AddAProduct from "../AddAProduct/AddAProduct";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
-import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+// import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import './AdminDashboard.css'
 
 import ManageOrders from "../ManageOrders/ManageOrders";
@@ -10,10 +10,11 @@ import ManageProducts from "../ManageProducts/ManageProducts";
 import Myorder from "../Myorder/Myorder";
 import Pay from "../Pay/Pay";
 import Review from "../Review/Review";
+import WelcomeDashboard from "../WelcomeDashboard/WelcomeDashboard";
 
 
 const AdminDashboard = () => {
-  const [control, setControl] = useState("pay");
+  const [control, setControl] = useState("WelcomeDashboard");
   const { logOut, user, admin } = useAuth()
 
   return (
@@ -87,6 +88,7 @@ const AdminDashboard = () => {
               {control === "AddAProduct" && <AddAProduct></AddAProduct>}
               {control === "MakeAdmin" && <MakeAdmin></MakeAdmin>}
               {control === "ManageProducts" && <ManageProducts></ManageProducts>}
+              {control === "WelcomeDashboard" && <WelcomeDashboard></WelcomeDashboard>}
 
             </div>
           </div>

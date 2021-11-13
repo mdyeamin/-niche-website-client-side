@@ -10,7 +10,7 @@ const ManageOrders = () => {
     const handleDelete = (id) => {
         const confirmation = window.confirm('Are you Sure? want to delete this item?')
         if (confirmation) {
-            fetch(`http://localhost:5000/allorders/${id}`, {
+            fetch(`https://polar-anchorage-77729.herokuapp.com/allorders/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })
@@ -26,8 +26,8 @@ const ManageOrders = () => {
 
 
     const handleUpdatestatus = (id) => {
-        const update = { status: 'PENDING...' }
-        const url = `http://localhost:5000/update/${id}`;
+        const update = { status: 'SHIFT' }
+        const url = `https://polar-anchorage-77729.herokuapp.com/update/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -48,7 +48,7 @@ const ManageOrders = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allorder')
+        fetch('https://polar-anchorage-77729.herokuapp.com/allorder')
             .then(res => res.json())
             .then(data => setAllorder(data))
     })

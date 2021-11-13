@@ -7,7 +7,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         const email = data.email;
 
-        const url = `http://localhost:5000/admin?email=${email}`;
+        const url = `https://polar-anchorage-77729.herokuapp.com/admin?email=${email}`;
         console.log(url)
         fetch(url, {
             method: 'PUT',
