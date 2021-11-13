@@ -1,6 +1,8 @@
 # West More Land's
 
-This project was bootstrapped with [West More Land's](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [West More Land's](https://west-more-land-s.web.app/).
+This project was bootstrapped with [Client code](https://github.com/programming-hero-web-course-4/niche-website-client-side-mdyeamin).
+This project was bootstrapped with [Server code](https://github.com/programming-hero-web-course-4/niche-website-server-side-mdyeamin).
 
 ## OUR SHOP FACILITIES
 
